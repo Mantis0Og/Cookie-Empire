@@ -3,7 +3,7 @@
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-overflow: hidden;
+
 }
 
 body{
@@ -33,12 +33,16 @@ justify-content: center;
 flex-direction: column;
 overflow: hidden;
 animation: fadelobby 1s ease-in-out;
+
 }
 
 #play-btn{
-    transform: scale(3);
+    margin-top: -10%;
+    transform: scale(2.5);
     height: 10%;
     transition: .3s ease;
+
+   
 }
 
 #play-btn:active{
@@ -46,9 +50,10 @@ animation: fadelobby 1s ease-in-out;
 }
 
 #banner-game{
-    margin-bottom: 12%;
+    margin-bottom: -17%;
     height: 10%;
     transform: scale(3);
+   
 
 }
 
@@ -68,4 +73,106 @@ animation: fadelobby 1s ease-in-out;
 
     }
 
+}
+
+.ciemnia{
+
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: scale(1);
+    opacity: 0;
+    background: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transition: 2s ease-in-out;
+    animation: cienia 2s ease-in-out;
+
+}
+
+@keyframes cienia {
+    
+    from{
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+.game-lobby{
+
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: url(./img/game-lobby-bg.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    opacity: 1;
+    animation: game-lobby 1s ease-in-out;
+
+}
+
+@keyframes game-lobby {
+    
+    from{
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+.buttons{
+
+    width: 100%;
+    height: 10%;
+    background: rgba(255, 0, 0, 0);
+    position: absolute;
+    bottom: 7%;
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    justify-content: space-evenly;
+}
+
+.button-shop{
+    display: flex;
+    width: 100%;
+    height: 100%;
+ 
+    transform: scale(1.5);
+    background: url(./img/btn-battle.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: .3s ease;
+    filter: drop-shadow(1px 1px 4px black);
+
+}
+
+.button-shop:active{
+    transform: scale(1);
+}
+
+
+.button-shop img{
+    width: 10%;
+    height: 100%;
 }
